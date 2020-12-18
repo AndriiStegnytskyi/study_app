@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-	root 'static_pages#contact'
+ root 'blogs#index'
+ get 'show' => 'blogs#show'
  get 'contact' => 'static_pages#contact'
 end
