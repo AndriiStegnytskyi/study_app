@@ -2,4 +2,7 @@
 <!--Carousel element -->
 <%= render 'layouts/carousel' %>
 
-
+<ol class="blogs">
+					<%= render @blogs %>
+</ol>
+<%= will_paginate @blogs %>

@@ -27,3 +27,27 @@
 .nav-link a {
 	color:white
 }
+
+
+.blogs {
+	list-style: none;
+	padding: 0;
+	.user {
+	margin-left: 3.8em;
+	padding-top: 0;
+	}
+	li {
+	padding: 10px 0;
+	border-top: 1px solid #e8e8e8;
+	}
+	.content {
+	display: block;
+	margin-left: 60px;
+	}
+	.timestamp {
+	color: gray;
+	display: block;
+	margin-left: 60px;
+	}
+
+}
