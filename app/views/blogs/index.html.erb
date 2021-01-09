@@ -6,18 +6,3 @@
 <%= will_paginate @blogs %>
 
 
-<%= form_for(User.new) do |x| %>
-
-<div class="field">
-<%= x.text_area :name, placeholder: "Please enter user's name" %>
-</div>
-<%end%>
-
-<%= form_for(Blog.new) do |f| %>
-
-<div class="field">
-<%= f.text_area :content, placeholder: "Compose new blog..." %>
-</div>
-
-<%= f.submit "Post", class: "btn btn primary" %>
-<%end%>
