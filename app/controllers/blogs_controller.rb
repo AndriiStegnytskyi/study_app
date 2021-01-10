@@ -15,6 +15,15 @@ class BlogsController < ApplicationController
 
 
   def create 
-    current_user.blogs.build(blog_params)
+    @blog = current_user.blogs.build(blog_params)
+    if @blog.save
+      redirect_to root_url
+    end
   end
+
+  private
+  def blog_params
+    params.require(:blog).permit(:content)
+  end
+  
 end
