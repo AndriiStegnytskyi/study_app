@@ -4,6 +4,7 @@ Rails.application.routes.draw do
  get 'show' => 'blogs#show'
  get 'contact' => 'static_pages#contact'
  
+ 
 
 devise_for :users 
 devise_scope :user do 
