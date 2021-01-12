@@ -1,5 +1,6 @@
 @import "bootstrap/scss/bootstrap";
 
+/*carousel*/
 
 .carousel-item {
 	height: 150px;
@@ -13,6 +14,7 @@
 }
 
 /*header */
+
 .navbar {
 	font-size: 1.15em;
 	text-transform: uppercase;
@@ -50,4 +52,11 @@
 	margin-left: 60px;
 	}
 
+}
+
+.navbar-nav{
+    white-space: nowrap;
+  }
+.navbar-nav li {
+	color: white !important
 }

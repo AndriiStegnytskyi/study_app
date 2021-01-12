@@ -1,5 +1,6 @@
 class BlogsController < ApplicationController
 
+
   def index 	
   	@blogs = Blog.paginate(page: params[:page], :per_page => 9, :total_entries =>9)
   end
@@ -15,8 +16,12 @@ class BlogsController < ApplicationController
 
 
   def create 
-    @blog = current_user.blogs.build(blog_params)
-    if @blog.save
+    if current_user
+      @blog = current_user.blogs.build(blog_params)     
+      @blog.save
+      redirect_to root_url
+    else  
+      flash[:alert] = "Будь ласка, увійдіть щоб мати можливість додавати свої пости"
       redirect_to root_url
     end
   end

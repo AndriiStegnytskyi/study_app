@@ -5,8 +5,18 @@
 				<li class="nav-link"><%= link_to "Головна", root_path %></li>
 				<li class="nav-link"><%= link_to "Блог", show_path %></li>
 				<li class="nav-link"><%= link_to "Контакти", contact_path %></li>
+				
 			</ul>
 		</div>
+		<div class="navbar navbar-expand-md navbar-dark bg-dark">
+			<ul class="navbar-nav mx-auto">
+				<% if current_user%> 
+			  <li class="nav-link">	<%=current_user.email.split('@')[0].capitalize%> </li> 
+			  	<% else %> 
+			  	<% end %>
+			</ul>
+		</div>
+
 		<div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
 			<ul class="navbar-nav ml-auto">				
 				<li class="nav-link"><%= link_to "Увійти", new_user_session_path %></li>

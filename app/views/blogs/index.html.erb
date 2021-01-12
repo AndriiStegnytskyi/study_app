@@ -7,10 +7,12 @@
 
 
 <%= form_for(Blog.new) do |f| %>
+
+
 <div class="field">
-<%= f.text_area :content, placeholder: "Compose new blog..." %>
+<%= f.text_area :content, placeholder: "Напишіть новий блог" %>
 </div>
-<%= f.submit "Post", class: "btn btn-primary" %>
+<%= f.submit "Додати", class: "btn btn-primary" %>
 <% end %>
 
 
