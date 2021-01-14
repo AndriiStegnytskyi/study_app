@@ -9,5 +9,5 @@ devise_scope :user do
 	get '/users/sign_out' => 'devise/sessions#destroy'
 end
 
- resources :blogs, only: [:create, :destroy]
+ resources :blogs, only: [:create, :update, :destroy]
 end
