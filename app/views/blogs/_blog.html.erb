@@ -4,7 +4,11 @@
 	<span class="user" ><%= blog.user.email %></span> 
  	<span class="content"><%= blog.content %></span> 
   	<span  class="timestamp">Posted <%= time_ago_in_words(blog.created_at) %> ago.</span> 
+  	<% if can? :update, blog %>
   	<%= link_to "Edit", edit_blog_path(blog.id) %>
+  	<% end %>
+  	<% if can? :destroy, blog %>
   	<%= link_to "Destroy", blog_path(blog.id), :method => :delete %>
+  	<% end %>
   	</li>
 </ul>

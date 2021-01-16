@@ -4,9 +4,8 @@ class Ability
   def initialize(user)
 
 
-    if user.admin?
-
-
+    if user.try(:admin?)
+        can :manage, :all 
     else
 
         can :update, Blog do |blog|
@@ -18,7 +17,8 @@ class Ability
         end
 
         can :create, Blog
-    end
+
+        end
 
 
     # Define abilities for the passed in user here. For example:
