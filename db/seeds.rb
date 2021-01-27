@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-99.times do |n|
+1.times do |n|
 password = Faker::Name.name
 email = "example-#{n+1}@railstutorial.org"
 User.create!(password: password,
@@ -15,7 +15,7 @@ email: email)
 end
 
 user = User.first
-50.times do
+1.times do
 content = Faker::Lorem.sentence(5)
 user.blogs.create!(content: content)
 end
